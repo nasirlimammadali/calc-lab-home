@@ -609,15 +609,8 @@ int main(int argc, char **argv)
             return 1;
         }
 
-        if (slash) {
-            size_t prefix = (size_t)(slash - source);
-
-            snprintf(default_out, n, "%.*s/%s_mammadali_nasirli_251ADB068",
-                     (int)prefix, source, stem);
-        } else {
-            snprintf(default_out, n, "%s_mammadali_nasirli_251ADB068",
-                     stem);
-        }
+        snprintf(default_out, n, "%s_mammadali_nasirli_251ADB068",
+         stem);
 
         free(stem);
         outdir = default_out;
